@@ -15,3 +15,18 @@ fn calc_stats(numbers: Vec<i32>) -> Stats {
         mean: 0.0,
     };
 }
+
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_min() {
+        let numbers = vec![1, 2, 3, 4, 5];
+        let stats = calc_stats(numbers);
+        assert_eq!(stats.min, 1);
+    }
+}
+
