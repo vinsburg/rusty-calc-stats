@@ -8,8 +8,14 @@ pub struct Stats {
 
 #[allow(dead_code)]
 fn calc_stats(numbers: Vec<i32>) -> Stats {
+    let mut cur_min: i32 = numbers[0];
+    for num in numbers {
+        if num < cur_min {
+            cur_min = num;
+        }
+    }
     return Stats {
-        min: 0,
+        min: cur_min,
         max: 0,
         len: 0,
         mean: 0.0,
