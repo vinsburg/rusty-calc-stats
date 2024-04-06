@@ -44,5 +44,12 @@ mod tests {
         let stats = calc_stats(numbers);
         assert_eq!(stats.max, 5);
     }
+
+    #[test]
+    fn test_len_is_5() {
+        let numbers = vec![1, 2, 3, 4, 5];
+        let stats = calc_stats(numbers);
+        assert_eq!(stats.len, 5);
+    }
 }
 
