@@ -53,5 +53,12 @@ mod tests {
         let stats = calc_stats(numbers);
         assert_eq!(stats.len, 5);
     }
+
+    #[test]
+    fn test_mean_is_3() {
+        let numbers = vec![1, 2, 3, 4, 5];
+        let stats = calc_stats(numbers);
+        assert_eq!(stats.mean, 3.0);
+    }
 }
 
