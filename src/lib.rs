@@ -11,8 +11,10 @@ fn calc_stats(numbers: Vec<i32>) -> Stats {
     let mut cur_min: i32 = numbers[0];
     let mut cur_max: i32 = numbers[0];
     let mut length: i32 = 0;
+    let mut cur_sum: i32 = 0;
     for num in numbers {
         length += 1;
+        cur_sum += num;
         if num < cur_min {
             cur_min = num;
         } else if num > cur_max {
@@ -23,7 +25,7 @@ fn calc_stats(numbers: Vec<i32>) -> Stats {
         min: cur_min,
         max: cur_max,
         len: length,
-        mean: 0.0,
+        mean: cur_sum as f64 / length as f64,
     };
 }
 
