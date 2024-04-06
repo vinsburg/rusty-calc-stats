@@ -29,10 +29,17 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_min() {
+    fn test_min_is_1() {
         let numbers = vec![1, 2, 3, 4, 5];
         let stats = calc_stats(numbers);
         assert_eq!(stats.min, 1);
+    }
+
+    #[test]
+    fn test_max_is_5() {
+        let numbers = vec![1, 2, 3, 4, 5];
+        let stats = calc_stats(numbers);
+        assert_eq!(stats.max, 5);
     }
 }
 
