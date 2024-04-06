@@ -10,7 +10,9 @@ pub struct Stats {
 fn calc_stats(numbers: Vec<i32>) -> Stats {
     let mut cur_min: i32 = numbers[0];
     let mut cur_max: i32 = numbers[0];
+    let mut length: i32 = 0;
     for num in numbers {
+        length += 1;
         if num < cur_min {
             cur_min = num;
         } else if num > cur_max {
@@ -20,7 +22,7 @@ fn calc_stats(numbers: Vec<i32>) -> Stats {
     return Stats {
         min: cur_min,
         max: cur_max,
-        len: 0,
+        len: length,
         mean: 0.0,
     };
 }
