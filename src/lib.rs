@@ -6,7 +6,6 @@ pub struct Stats {
     pub mean: f64,
 }
 
-#[allow(dead_code)]
 pub fn calc_stats(numbers: &Vec<i32>) -> Stats {
     // copy the first element to initialize the min and max:
     let nums = (*numbers).clone();
