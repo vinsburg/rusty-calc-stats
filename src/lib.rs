@@ -1,13 +1,13 @@
 #[allow(dead_code)]
 pub struct Stats {
-    min: i32,
-    max: i32,
-    len: i32,
-    mean: f64,
+    pub min: i32,
+    pub max: i32,
+    pub len: i32,
+    pub mean: f64,
 }
 
 #[allow(dead_code)]
-fn calc_stats(numbers: Vec<i32>) -> Stats {
+pub fn calc_stats(numbers: Vec<i32>) -> Stats {
     let mut cur_min: i32 = numbers[0];
     let mut cur_max: i32 = numbers[0];
     let mut length: i32 = 0;
@@ -28,8 +28,6 @@ fn calc_stats(numbers: Vec<i32>) -> Stats {
         mean: cur_sum as f64 / length as f64,
     };
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -63,4 +61,3 @@ mod tests {
         assert_eq!(stats.mean, 3.0);
     }
 }
-
