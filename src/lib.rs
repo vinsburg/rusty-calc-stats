@@ -8,12 +8,11 @@ pub struct Stats {
 
 pub fn calc_stats(numbers: &Vec<i32>) -> Stats {
     // copy the first element to initialize the min and max:
-    let nums = (*numbers).clone();
-    let mut cur_min: i32 = nums[0];
-    let mut cur_max: i32 = nums[0];
+    let mut cur_min: i32 = numbers[0];
+    let mut cur_max: i32 = numbers[0];
     let mut length: i32 = 0;
     let mut cur_sum: i32 = 0;
-    for num in nums {
+    for &num in numbers {
         length += 1;
         cur_sum += num;
         if num < cur_min {
